@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sharlene Pillay — Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Sharlene Pillay — developer, designer, creator."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#">Sharlene Pillay</a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn" href="#contact">Hire me</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Sharlene Pillay</span></h1>
+          <p class="lead">
+            I build accessible, performant web apps and delightful user
+            experiences.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View work</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-avatar" aria-hidden="true">
+          <!-- Simple SVG avatar placeholder -->
+          <svg
+            width="140"
+            height="140"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#7b61ff" />
+                <stop offset="1" stop-color="#3ec7a7" />
+              </linearGradient>
+            </defs>
+            <circle cx="60" cy="60" r="58" fill="url(#g)" />
+            <circle cx="60" cy="48" r="18" fill="white" opacity="0.9" />
+            <path
+              d="M24 100c8-20 40-20 36-20s28 0 36 20"
+              fill="white"
+              opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section about">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I’m a web developer focused on building accessible, useful products.
+            I enjoy turning complex problems into elegant solutions and learning
+            new technologies.
+          </p>
+          <p>
+            Skills: HTML, CSS, JavaScript, React, Node.js, MongoDB, Express
+            (MERN), UX, Accessibility.
+          </p>
+          <div class="certifications" style="margin-top: 0.6rem">
+            <strong>Certifications:</strong>
+            <p style="margin: 0.2rem 0 0; color: var(--muted)">
+              Completed a MERN Full-Stack course — experienced in building
+              full-stack apps with MongoDB, Express, React and Node.js.
+            </p>
+            <p style="margin: 0.2rem 0 0; color: var(--muted)">
+              Title: Software Developer
+            </p>
+          </div>
+          <!-- Skill proficiency bars -->
+          <div class="skill-proficiency" style="margin-top: 1rem">
+            <h3 style="margin-bottom: 0.5rem">Full-stack proficiency</h3>
+            <p style="color: var(--muted); margin-top: 0">
+              Proficiency shown as a relative indicator.
+            </p>
+            <div class="skill-bars" style="margin-top: 0.6rem">
+              <div class="skill">
+                <div class="skill-label">JavaScript</div>
+                <div class="skill-meta">96%</div>
+                <div class="bar" aria-hidden="true" data-percent="96">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="skill-label">React</div>
+                <div class="skill-meta">95%</div>
+                <div class="bar" aria-hidden="true" data-percent="95">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="skill-label">Node.js</div>
+                <div class="skill-meta">94%</div>
+                <div class="bar" aria-hidden="true" data-percent="94">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="skill-label">MongoDB</div>
+                <div class="skill-meta">92%</div>
+                <div class="bar" aria-hidden="true" data-percent="92">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="skill-label">Express</div>
+                <div class="skill-meta">93%</div>
+                <div class="bar" aria-hidden="true" data-percent="93">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="skill-label">Testing</div>
+                <div class="skill-meta">90%</div>
+                <div class="bar" aria-hidden="true" data-percent="90">
+                  <div class="bar-inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="badges" style="margin-top: 0.6rem">
+            <strong>Badges</strong>
+            <div class="badge-item" style="margin-top: 0.4rem">
+              <a
+                href="https://www.credly.com/badges/320b9aa0-c66a-4868-9254-7b4bd56e89c0"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open JavaScript badge on Credly"
+              >
+                <img
+                  src="https://raster-apps-badges.s3.amazonaws.com/default-badge.png"
+                  alt="JavaScript badge"
+                  style="
+                    height: 36px;
+                    border-radius: 6px;
+                    vertical-align: middle;
+                  "
+                />
+                <span
+                  style="
+                    margin-left: 0.6rem;
+                    color: var(--muted);
+                    vertical-align: middle;
+                  "
+                  >JavaScript Badge — View</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="container">
+          <h2>Selected Projects</h2>
+          <div id="projects-grid" class="grid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            If you'd like to work together, email me at
+            <a id="email-link" href="mailto:sharlenepillay14@gmail.com"
+              >sharlenepillay14@gmail.com</a
+            >.
+          </p>
+          <p>
+            Or reach out on <a href="#">LinkedIn</a> / <a href="#">Twitter</a>.
+          </p>
+
+          <div class="reachout" style="margin-top: 1.25rem">
+            <h3>Reach out</h3>
+            <p style="color: var(--muted); margin-top: 0.2rem">
+              Prefer to message? Use the form below — I typically respond within
+              <strong>24–48 hours</strong>.
+            </p>
+
+            <!-- Replace YOUR_FORM_ID with your Formspree form id, or leave as-is and visitors can use the mail link fallback -->
+            <form
+              id="reach-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <label for="r-name" style="display: block; margin-top: 0.6rem"
+                >Name</label
+              >
+              <input
+                id="r-name"
+                name="name"
+                type="text"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 8px;
+                  border: 1px solid rgba(255, 255, 255, 0.06);
+                  background: transparent;
+                  color: var(--text);
+                "
+              />
+
+              <label for="r-email" style="display: block; margin-top: 0.6rem"
+                >Email</label
+              >
+              <input
+                id="r-email"
+                name="email"
+                type="email"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 8px;
+                  border: 1px solid rgba(255, 255, 255, 0.06);
+                  background: transparent;
+                  color: var(--text);
+                "
+              />
+
+              <label for="r-message" style="display: block; margin-top: 0.6rem"
+                >Message</label
+              >
+              <textarea
+                id="r-message"
+                name="message"
+                rows="5"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 8px;
+                  border: 1px solid rgba(255, 255, 255, 0.06);
+                  background: transparent;
+                  color: var(--text);
+                "
+              ></textarea>
+
+              <div
+                style="
+                  margin-top: 0.6rem;
+                  display: flex;
+                  gap: 0.6rem;
+                  align-items: center;
+                "
+              >
+                <button type="submit" class="btn">Send message</button>
+                <div
+                  id="form-status"
+                  role="status"
+                  aria-live="polite"
+                  style="color: var(--muted)"
+                ></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small>© <span id="year"></span> Sharlene Pillay. Built with ❤️.</small>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

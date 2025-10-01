@@ -1,0 +1,10 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "A simple static portfolio site",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1"
+  },
+  "author": "Sharlene Pillay",
+  "license": "MIT"
+}
