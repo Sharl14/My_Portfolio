@@ -143,6 +143,63 @@ body {
   text-decoration: none;
 }
 
+.project-actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.view-link {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.vercel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.vercel-triangle {
+  font-size: 0.7rem;
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.vercel-text {
+  color: var(--muted);
+}
+
+.github-badge,
+.vscode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.github-badge .gh-icon,
+.vscode-badge .vsc-icon {
+  font-size: 0.9rem;
+}
+.github-badge .gh-text,
+.vscode-badge .vsc-text {
+  color: var(--muted);
+}
+.github-badge:hover,
+.vscode-badge:hover,
+.vercel-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+}
+
 .footer {
   padding: 2rem 0;
   color: var(--muted);
@@ -176,6 +233,11 @@ body {
 /* small utilities */
 .grid .card img {
   width: 100%;
+
+  /* qualities list */
+  .qualities-list li {
+    margin: 0.3rem 0;
+  }
   border-radius: 8px;
 }
 

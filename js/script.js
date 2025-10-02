@@ -1,14 +1,14 @@
 // Simple script to populate projects and wire small UI interactions
 const projects = [
   {
-    title: "Project Alpha",
-    desc: "A fast, accessible web app that helps users track tasks and productivity.",
-    link: "#",
+    title: "Resume & Cover Letter App",
+    desc: "An app that helps users create tailored resumes and cover letters quickly, with templates, export and personalization features.",
+    link: "https://letter-perfect-resumes.vercel.app/",
   },
   {
-    title: "Design System Kit",
-    desc: "A reusable component library and tokens for consistent UI across products.",
-    link: "#",
+    title: "Business Website",
+    desc: "A responsive business website template focused on conversion and clean branding, built with modern web practices.",
+    link: "https://web-test-bice.vercel.app/",
   },
   {
     title: "Portfolio Builder",
@@ -28,7 +28,86 @@ function renderProjects() {
   projects.forEach((p) => {
     const card = document.createElement("article");
     card.className = "card";
-    card.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p><a href="${p.link}" target="_blank" rel="noopener">View project →</a>`;
+
+    const title = document.createElement("h3");
+    title.textContent = p.title;
+
+    const desc = document.createElement("p");
+    desc.textContent = p.desc;
+
+    const actions = document.createElement("div");
+    actions.className = "project-actions";
+
+    const view = document.createElement("a");
+    view.href = p.link || "#";
+    view.target = "_blank";
+    view.rel = "noopener";
+    view.className = "view-link";
+    view.textContent = "View project →";
+    actions.appendChild(view);
+
+    // show a small Vercel badge if the link points to vercel.app
+    if (p.link && p.link.includes("vercel.app")) {
+      const badge = document.createElement("a");
+      badge.href = p.link;
+      badge.target = "_blank";
+      badge.rel = "noopener noreferrer";
+      badge.className = "vercel-badge";
+      badge.setAttribute("aria-label", "Open deployment on Vercel");
+      // simple triangle + label
+      badge.innerHTML =
+        '<span class="vercel-triangle" aria-hidden="true">▲</span><span class="vercel-text">Vercel</span>';
+      actions.appendChild(badge);
+
+      // GitHub badge: link to repo if provided, otherwise show a 'Private' badge that opens mail
+      const githubBadge = document.createElement("a");
+      if (p.repo) {
+        githubBadge.href = p.repo;
+        githubBadge.setAttribute("aria-label", "Open repository on GitHub");
+        githubBadge.target = "_blank";
+        githubBadge.rel = "noopener noreferrer";
+        githubBadge.innerHTML =
+          '<span class="gh-icon" aria-hidden="true">🐙</span><span class="gh-text">GitHub</span>';
+      } else {
+        githubBadge.href = "mailto:sharlenepillay14@gmail.com";
+        githubBadge.setAttribute(
+          "aria-label",
+          "Private repository — request access"
+        );
+        githubBadge.innerHTML =
+          '<span class="gh-icon" aria-hidden="true">🔒</span><span class="gh-text">Private</span>';
+      }
+      githubBadge.className = "github-badge";
+      actions.appendChild(githubBadge);
+
+      // VSCode badge: link to the live demo if present (visual indicator)
+      const vscBadge = document.createElement("a");
+      vscBadge.className = "vscode-badge";
+      if (p.link) {
+        vscBadge.href = p.link;
+        vscBadge.target = "_blank";
+        vscBadge.rel = "noopener noreferrer";
+        vscBadge.setAttribute(
+          "aria-label",
+          "Open project demo (open in browser)"
+        );
+        vscBadge.innerHTML =
+          '<span class="vsc-icon" aria-hidden="true">🧑‍💻</span><span class="vsc-text">VSCode</span>';
+      } else {
+        vscBadge.href = "mailto:sharlenepillay14@gmail.com";
+        vscBadge.setAttribute(
+          "aria-label",
+          "No demo available — request access"
+        );
+        vscBadge.innerHTML =
+          '<span class="vsc-icon" aria-hidden="true">🧑‍💻</span><span class="vsc-text">VSCode</span>';
+      }
+      actions.appendChild(vscBadge);
+    }
+
+    card.appendChild(title);
+    card.appendChild(desc);
+    card.appendChild(actions);
     grid.appendChild(card);
   });
 }
