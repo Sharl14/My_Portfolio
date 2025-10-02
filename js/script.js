@@ -54,9 +54,11 @@ function renderProjects() {
       badge.rel = "noopener noreferrer";
       badge.className = "vercel-badge";
       badge.setAttribute("aria-label", "Open deployment on Vercel");
-      // simple triangle + label
+      // vercel SVG icon + label
       badge.innerHTML =
-        '<span class="vercel-triangle" aria-hidden="true">▲</span><span class="vercel-text">Vercel</span>';
+        '<svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3l10 17H2L12 3z"/></svg><span class="vercel-text" style="margin-left:0.45rem">Vercel</span>';
+      // stagger entrance for badges
+      badge.style.transitionDelay = "120ms";
       actions.appendChild(badge);
 
       // GitHub badge: link to repo if provided, otherwise show a 'Private' badge that opens mail
@@ -67,7 +69,8 @@ function renderProjects() {
         githubBadge.target = "_blank";
         githubBadge.rel = "noopener noreferrer";
         githubBadge.innerHTML =
-          '<span class="gh-icon" aria-hidden="true">🐙</span><span class="gh-text">GitHub</span>';
+          '<svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 4 2.53 7.4 6.04 8.6.44.08.6-.2.6-.44 0-.22-.01-.8-.01-1.57-2.45.53-2.96-.97-2.96-.97-.4-1.02-.98-1.29-.98-1.29-.8-.55.06-.54.06-.54.9.06 1.38.93 1.38.93.78 1.34 2.05.95 2.55.73.08-.57.31-.95.56-1.17-1.96-.22-4.02-.98-4.02-4.34 0-.96.34-1.74.9-2.35-.09-.22-.39-1.12.09-2.33 0 0 .74-.24 2.44.9.7-.2 1.45-.3 2.2-.3.75 0 1.5.1 2.2.3 1.7-1.14 2.44-.9 2.44-.9.48 1.21.18 2.11.09 2.33.56.61.9 1.39.9 2.35 0 3.36-2.06 4.12-4.02 4.34.32.28.6.82.6 1.66 0 1.2-.01 2.17-.01 2.47 0 .24.16.53.61.44C18.47 18.4 21 15 21 11c0-4.97-4.03-9-9-9z"/></svg><span class="gh-text" style="margin-left:0.45rem">GitHub</span>';
+        githubBadge.style.transitionDelay = "200ms";
       } else {
         githubBadge.href = "mailto:sharlenepillay14@gmail.com";
         githubBadge.setAttribute(
@@ -75,7 +78,7 @@ function renderProjects() {
           "Private repository — request access"
         );
         githubBadge.innerHTML =
-          '<span class="gh-icon" aria-hidden="true">🔒</span><span class="gh-text">Private</span>';
+          '<svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17 8V7a5 5 0 00-10 0v1H5v12h14V8h-2zM9 7a3 3 0 016 0v1H9V7z"/></svg><span class="gh-text" style="margin-left:0.45rem">Private</span>';
       }
       githubBadge.className = "github-badge";
       actions.appendChild(githubBadge);
@@ -92,7 +95,8 @@ function renderProjects() {
           "Open project demo (open in browser)"
         );
         vscBadge.innerHTML =
-          '<span class="vsc-icon" aria-hidden="true">🧑‍💻</span><span class="vsc-text">VSCode</span>';
+          '<svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4l7 5-7 5V4z"/><path d="M20 4l-8.5 6L20 16V4z" opacity="0.9"/></svg><span class="vsc-text" style="margin-left:0.45rem">VSCode</span>';
+        vscBadge.style.transitionDelay = "280ms";
       } else {
         vscBadge.href = "mailto:sharlenepillay14@gmail.com";
         vscBadge.setAttribute(
@@ -100,7 +104,7 @@ function renderProjects() {
           "No demo available — request access"
         );
         vscBadge.innerHTML =
-          '<span class="vsc-icon" aria-hidden="true">🧑‍💻</span><span class="vsc-text">VSCode</span>';
+          '<svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4l7 5-7 5V4z"/><path d="M20 4l-8.5 6L20 16V4z" opacity="0.9"/></svg><span class="vsc-text" style="margin-left:0.45rem">VSCode</span>';
       }
       actions.appendChild(vscBadge);
     }
