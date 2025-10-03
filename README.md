@@ -38,3 +38,36 @@ What I can do next (pick any):
 - Deploy to GitHub Pages or Netlify and I can prepare the steps
 
 Tell me which name, email, projects (titles + descriptions + links) and color preferences you want and I’ll customize the site for you.
+
+## Hosting / deploy options
+
+Below are three easy ways to publish this static portfolio.
+
+1. GitHub Pages (automatic via Actions)
+
+- This repo includes a GitHub Actions workflow at `.github/workflows/deploy-gh-pages.yml` that will deploy the repository root to the branch `gh-pages` whenever you push to `main`.
+- To enable: push your code to GitHub. The action will run and create/update the `gh-pages` branch. Then in your repository Settings → Pages, set the site source to the `gh-pages` branch and the root folder. The site will be available at `https://<your-username>.github.io/<repo-name>/`.
+
+2. Netlify (recommended for static sites)
+
+- There's a `netlify.toml` included which tells Netlify to publish the repository root. To deploy:
+  - Connect the repository in Netlify (Site → New site → Import from Git).
+  - Choose this repo, use the default settings (build command empty, publish directory `.`) and trigger a deploy.
+
+3. Vercel (zero-config for static frontends)
+
+- Import the repository in Vercel (vercel.com). Vercel detects static sites and will publish to a `vercel.app` URL.
+
+### Local preview
+
+You can continue to preview locally with the npm script:
+
+```powershell
+npm run start
+# then open http://localhost:3000
+```
+
+Notes
+
+- If you prefer GitHub Pages without Actions, you can enable Pages to serve from the `main` branch directly, but Actions + `gh-pages` gives cleaner deploys.
+- The contact form currently uses Formspree and requires replacing `YOUR_FORM_ID` in `index.html` to collect submissions. Alternatively, use Netlify Forms if you deploy to Netlify.

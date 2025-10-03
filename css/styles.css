@@ -2,13 +2,13 @@
 :root {
   --bg: #0f1720;
   --card: #0b1220;
-  --muted: #9aa4b2;
-  --accent: #7b61ff;
-  --accent-2: #3ec7a7;
+  --muted: #e5e8ec;
+  --accent: #bdbcc3;
+  --accent-2: #686a76;
   --text: #e6eef6;
   --glass: rgba(255, 255, 255, 0.04);
-  --bg-1: #0f1720; /* deep indigo */
-  --bg-2: #073b37; /* teal-dark */
+  --bg-1: #454e55; /* deep indigo */
+  --bg-2: #1d1e48; /* teal-dark */
 }
 * {
   box-sizing: border-box;

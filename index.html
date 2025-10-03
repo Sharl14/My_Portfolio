@@ -530,12 +530,22 @@
               <strong>24–48 hours</strong>.
             </p>
 
-            <!-- Replace YOUR_FORM_ID with your Formspree form id, or leave as-is and visitors can use the mail link fallback -->
+            <!-- Netlify Forms: form will be processed automatically when deployed to Netlify -->
             <form
               id="reach-form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              name="contact"
               method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
             >
+              <!-- Netlify requires a form-name hidden field -->
+              <input type="hidden" name="form-name" value="contact" />
+              <!-- honeypot field (spam protection) -->
+              <p style="display: none">
+                <label
+                  >Don’t fill this out if you're human: <input name="bot-field"
+                /></label>
+              </p>
               <label for="r-name" style="display: block; margin-top: 0.6rem"
                 >Name</label
               >
