@@ -532,10 +532,23 @@
           <p>
             Or reach out on
             <a
+              class="linkedin-link"
               href="https://www.linkedin.com/in/sharlene-pillay1488/"
               target="_blank"
               rel="noopener noreferrer"
-              >LinkedIn</a
+            >
+              <svg
+                class="linkedin-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="#0A66C2"
+                  d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.6a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.97v5.65h-3.56V9h3.42v1.56h.05c.48-.9 1.65-1.86 3.4-1.86 3.63 0 4.3 2.39 4.3 5.49v6.77z"
+                />
+              </svg> </a
             >.
           </p>
 
@@ -546,12 +559,12 @@
               <strong>24–48 hours</strong>.
             </p>
 
-            <!-- Formspree: replace YOUR_FORM_ID with your Formspree form id to enable submissions -->
+            <!-- Formspree configured: submissions will be sent to your Formspree form -->
             <form
               id="reach-form"
               name="contact"
               method="POST"
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              action="https://formspree.io/f/xjkaojaz"
             >
               <!-- optional honeypot field -->
               <p style="display: none">
@@ -641,6 +654,15 @@
       </div>
     </footer>
 
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      window.formbutton =
+        window.formbutton ||
+        function () {
+          (formbutton.q = formbutton.q || []).push(arguments);
+        };
+      formbutton("create", { action: "https://formspree.io/f/xjkaojaz" });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

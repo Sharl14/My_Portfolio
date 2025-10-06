@@ -424,6 +424,32 @@ body {
   transform: translateY(8px);
 }
 
+/* email link styling (slightly larger, grey and italic) */
+#email-link {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+#email-link:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+/* LinkedIn logo link */
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #0a66c2; /* LinkedIn blue */
+  text-decoration: none;
+}
+.linkedin-link .linkedin-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bar-inner,
   .reveal,
