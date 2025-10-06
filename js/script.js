@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Portfolio Builder",
     desc: "This very site — a minimal, responsive portfolio template.",
-    link: "#",
+    link: "https://sharlenepillay.netlify.app/",
   },
   {
     title: "MERN Task Manager",
@@ -260,40 +260,31 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // As a final fallback, instruct user to email
-      formStatus.innerHTML =
-        'Form not configured. Please email me directly at <a href="mailto:' +
-        email +
-        '">' +
-        email +
-        "</a>";
+      // As a final fallback, open the user's email client with a prefilled mailto
+      try {
+        const name = document.getElementById("r-name")?.value || "";
+        const from = document.getElementById("r-email")?.value || "";
+        const message = document.getElementById("r-message")?.value || "";
+        const subject = encodeURIComponent(
+          `Portfolio message from ${name || from || "website"}`
+        );
+        const bodyLines = [];
+        if (name) bodyLines.push(`Name: ${name}`);
+        if (from) bodyLines.push(`Reply-To: ${from}`);
+        if (message) bodyLines.push(`\nMessage:\n${message}`);
+        const body = encodeURIComponent(bodyLines.join("\n"));
+        const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
+        // open user's mail client
+        window.location.href = mailto;
+        formStatus.textContent = "Opening your email client...";
+      } catch (err) {
+        formStatus.innerHTML =
+          'Form not configured. Please email me directly at <a href="mailto:' +
+          email +
+          '">' +
+          email +
+          "</a>";
+      }
     });
   }
-});
-const form = document.getElementById("reach-form");
-const formStatus = document.getElementById("form-status");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
-
-  fetch("/", {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/x-www-form-urlencoded",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        formStatus.textContent = "Message sent successfully!";
-        form.reset();
-      } else {
-        formStatus.textContent = "Error sending message. Please try again.";
-      }
-    })
-    .catch((error) => {
-      formStatus.textContent = "Error sending message. Please try again.";
-      console.error(error);
-    });
 });

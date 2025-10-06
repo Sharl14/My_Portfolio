@@ -50,27 +50,18 @@
           </div>
         </div>
         <div class="hero-avatar" aria-hidden="true">
-          <!-- Simple SVG avatar placeholder -->
-          <svg
-            width="140"
-            height="140"
-            viewBox="0 0 120 120"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#7b61ff" />
-                <stop offset="1" stop-color="#3ec7a7" />
-              </linearGradient>
-            </defs>
-            <circle cx="60" cy="60" r="58" fill="url(#g)" />
-            <circle cx="60" cy="48" r="18" fill="white" opacity="0.9" />
-            <path
-              d="M24 100c8-20 40-20 36-20s28 0 36 20"
-              fill="white"
-              opacity="0.9"
-            />
-          </svg>
+          <!-- user photo (images/my pic.jpg) -->
+          <img
+            src="images/my%20pic.jpg"
+            alt="Sharlene Pillay photo"
+            style="
+              width: 140px;
+              height: 140px;
+              border-radius: 14px;
+              object-fit: cover;
+              display: block;
+            "
+          />
         </div>
       </div>
     </header>
@@ -115,6 +106,10 @@
               Title: Software Developer
             </p>
           </div>
+          <p style="margin-top: 0.6rem; color: var(--muted)">
+            I am flexible across all time zones and can align with international
+            teams or clients.
+          </p>
           <!-- Skill proficiency bars -->
           <div class="skill-proficiency" style="margin-top: 1rem">
             <h3 style="margin-bottom: 0.5rem">Full-stack proficiency</h3>
@@ -180,15 +175,30 @@
                 rel="noopener noreferrer"
                 aria-label="Open JavaScript badge on Credly"
               >
-                <img
-                  src="https://raster-apps-badges.s3.amazonaws.com/default-badge.png"
-                  alt="JavaScript badge"
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-hidden="true"
                   style="
-                    height: 36px;
                     border-radius: 6px;
                     vertical-align: middle;
+                    background: #f7df1e;
+                    padding: 6px;
                   "
-                />
+                >
+                  <rect width="48" height="48" rx="6" fill="#f7df1e" />
+                  <path
+                    d="M19.8 33.6c.9 1.4 1.9 2.6 4.2 2.6 2.2 0 3.6-1.1 3.6-2.6 0-1.8-1.5-2.4-4-3.4l-1.4-.6c-2-1-3.3-2.2-3.3-4 0-2.2 1.7-3.9 4.3-3.9 1.9 0 3.3.7 4.3 2.4l-2.3 1.4c-.5-.9-1.1-1.3-2-1.3-1 0-1.6.7-1.6 1.3 0 .9.6 1.4 2 2 2.2.8 3.6 1.8 3.6 4 0 2.3-1.8 4.1-4.6 4.1-2.6 0-4.3-1.2-5.1-2.6l1.6-.9z"
+                    fill="#000"
+                  />
+                  <path
+                    d="M29.6 34.2c.2.3.7.6 1.5.6.8 0 1.3-.3 1.3-.9 0-.5-.4-.8-1.3-1.1l-1.1-.4c-1-.4-1.8-1-1.8-2.4 0-1.3 1-2.2 2.6-2.2 1.1 0 1.9.4 2.5 1l-1.2 1.1c-.3-.2-.6-.4-1-.4-.4 0-.6.2-.6.5 0 .3.2.5.6.7l1 .4c1 .4 1.7 1 1.7 2.5 0 1.4-1.1 2.6-3 2.6-1.7 0-2.7-.8-3.2-1.4l1.2-1z"
+                    fill="#000"
+                  />
+                </svg>
                 <span
                   style="
                     margin-left: 0.6rem;
@@ -520,7 +530,13 @@
             >.
           </p>
           <p>
-            Or reach out on <a href="#">LinkedIn</a> / <a href="#">Twitter</a>.
+            Or reach out on
+            <a
+              href="https://www.linkedin.com/in/sharlene-pillay1488/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >.
           </p>
 
           <div class="reachout" style="margin-top: 1.25rem">
@@ -530,17 +546,14 @@
               <strong>24–48 hours</strong>.
             </p>
 
-            <!-- Netlify Forms: form will be processed automatically when deployed to Netlify -->
+            <!-- Formspree: replace YOUR_FORM_ID with your Formspree form id to enable submissions -->
             <form
               id="reach-form"
               name="contact"
               method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
+              action="https://formspree.io/f/YOUR_FORM_ID"
             >
-              <!-- Netlify requires a form-name hidden field -->
-              <input type="hidden" name="form-name" value="contact" />
-              <!-- honeypot field (spam protection) -->
+              <!-- optional honeypot field -->
               <p style="display: none">
                 <label
                   >Don’t fill this out if you're human: <input name="bot-field"
