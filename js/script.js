@@ -18,7 +18,7 @@ const projects = [
   {
     title: "MERN Task Manager",
     desc: "A full-stack MERN application for creating, assigning and tracking tasks with authentication and a REST API.",
-    link: "#",
+    link: "https://issue-spot.vercel.app/",
   },
 ];
 
