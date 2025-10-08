@@ -20,6 +20,11 @@ const projects = [
     desc: "A full-stack MERN application for creating, assigning and tracking tasks with authentication and a REST API.",
     link: "https://issue-spot.vercel.app/",
   },
+  {
+    title: "E-commerce Store",
+    desc: "A mock e-commerce store with product listings, shopping cart, and checkout flow using React and Stripe API.",
+    link: "https://beauty-botique-shop.vercel.app/",
+  },
 ];
 
 function renderProjects() {
